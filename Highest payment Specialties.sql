@@ -1,0 +1,10 @@
+SELECT services.FISCAL_YEAR, services.SPECIALTY, services.PRACTITIONERS, expenditures.PAYMENTS
+FROM services 
+INNER JOIN expenditures
+ON services.SPECIALTY= expenditures.SPECIALTY 
+AND services.FISCAL_YEAR= expenditures.FISCAL_YEAR
+WHERE PRACTITIONERS >100
+ORDER BY FISCAL_YEAR DESC, PAYMENTS DESC;
+
+
+
